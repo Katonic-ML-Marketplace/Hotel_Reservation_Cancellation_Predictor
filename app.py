@@ -22,7 +22,7 @@ st.set_page_config(
     initial_sidebar_state = 'auto'
 )
 
-st.sidebar.image('logo.png')
+st.sidebar.image('image/logo.png')
 st.sidebar.title('Hotel Reservation Cancellation Prediction')
 st.sidebar.write('---')
 
@@ -34,7 +34,7 @@ This app predicts **Predict the likelihood of Guest Booking Cancellation**!
 st.write('---')
 
 # load data
-data_df = pd.read_csv('hotel_reservation_cancel.csv')
+data_df = pd.read_csv('data/hotel_reservation_cancel.csv')
 st.write(data_df.head(20))
 
 # showing fig1
@@ -167,7 +167,7 @@ y = data_df['is_canceled']
 
 # to retrain
 agree = st.checkbox('Check to retrain the model')
-filename = 'finalized_model.sav'
+filename = 'model/finalized_model.sav'
 if agree:
     # Build Regression Model
     model = LogisticRegression() 
