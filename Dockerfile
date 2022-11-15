@@ -1,9 +1,10 @@
 FROM python:3.8.2-slim
 
 COPY app.py .
-COPY hotel_reservation_cancel.csv .
-COPY finalized_model.sav .
-COPY logo.png .
+COPY data/hotel_reservation_cancel.csv data/.
+COPY model/finalized_model.sav model/.
+COPY image/logo.png image/.
+COPY image/favicon.ico image/.
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt
